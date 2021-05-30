@@ -1,0 +1,24 @@
+<mat-card class="block">
+    <form class="example-form" [formGroup]="filmEditForm">
+        <h3 style="color: darkgray">Informácie filmu</h3>
+        <div>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Názov" formControlName="filmName">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Rok" type="number" formControlName="year">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Slovenský názov" formControlName="slovakName">
+            </mat-form-field>
+        </div>
+        <br><br>
+        <button mat-button mat-dialog-close (click)="onClick()" [disabled]="filmEditForm?.invalid" mat-raised-button type="submit" value="submit"
+                style="background: #673ab7;color: white">Save
+        </button>
+    </form>
+</mat-card>
